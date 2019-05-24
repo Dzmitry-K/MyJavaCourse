@@ -12,8 +12,8 @@ import java.util.Scanner;
 
 public class Hw_1_func_1 {
     public static void main(String[] args) {
+        Scanner enteredDate = new Scanner(System.in);
         try {
-            Scanner enteredDate = new Scanner(System.in);
             System.out.println("Введите дату: \"День.Месяц.Год\"");
             int day = enteredDate.nextInt();
             int month = enteredDate.nextInt();
