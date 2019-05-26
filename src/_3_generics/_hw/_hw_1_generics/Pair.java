@@ -5,7 +5,7 @@
 
 package _3_generics._hw._hw_1_generics;
 
-public class Pair<E> {
+public class Pair<E>  {
     private E firstElem;
     private E secondElem;
 
