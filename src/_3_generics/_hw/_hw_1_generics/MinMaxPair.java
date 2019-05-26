@@ -5,7 +5,10 @@
 
 package _3_generics._hw._hw_1_generics;
 
-public class MinMaxPair<T extends Comparable<T>> extends Pair<T> {
+
+public class MinMaxPair<T extends Comparable<T>> extends Pair<T>{
+    private Pair<T> firstPair;
+    private Pair<T> secondPair;
 
     public MinMaxPair(T firstElem, T secondElem) {
         super(firstElem, secondElem);
