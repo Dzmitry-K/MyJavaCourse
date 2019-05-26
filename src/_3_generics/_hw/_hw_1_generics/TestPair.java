@@ -9,5 +9,11 @@ public class TestPair {
         pair.setSecondElem(2);
         System.out.println(pair.getFirstElem());
         System.out.println(pair.getSecondElem());
+
+        System.out.println(new MinMaxPair<Integer>(1, 2).maxPair());
+        System.out.println(new MinMaxPair<Integer>(1, 2).minPair());
+        System.out.println(new MinMaxPair<String>("abc", "bcd").maxPair());
+        System.out.println(new MinMaxPair<String>("abc", "bcd").minPair());
+
     }
 }
