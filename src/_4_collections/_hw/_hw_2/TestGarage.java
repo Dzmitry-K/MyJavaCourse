@@ -19,6 +19,7 @@ public class TestGarage {
 
         System.out.println("Автомобиль Zil выехал из гаража.");
         garage.getCar(zil);
+        System.out.println();
 
         System.out.println("Автомобили в гараже:");
         garage.garageDescription();
