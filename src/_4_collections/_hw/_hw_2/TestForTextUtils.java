@@ -8,6 +8,6 @@ public class TestForTextUtils {
                       " As the son of a prominent politician, it was unsurprising that Churchill was soon drawn into politics himself.";
 
 
-        System.out.println(new TextUtils(text).getMapWord());
+        System.out.println(new TextUtils(text).getWord());
     }
 }

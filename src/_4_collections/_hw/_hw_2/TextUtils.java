@@ -27,7 +27,7 @@ public class TextUtils {
         }
     }
 
-    public Map<String, Integer> getMapWord() {
+    public Map<String, Integer> getWord() {
         return words;
     }
 }
