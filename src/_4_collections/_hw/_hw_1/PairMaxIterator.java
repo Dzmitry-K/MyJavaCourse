@@ -28,7 +28,7 @@ public class PairMaxIterator<E extends Comparable<E>> implements Iterator<E> {
 
     @Override
     public E next() {
-        getMax<E> pairMinMax = new getMax<>(this.pairList.get(this.current++));
-        return (E) pairMinMax.maxPair();
+        MinMaxPair<E> pairMinMax = new MinMaxPair<>(this.pairList.get(this.current++));
+        return (E) pairMinMax.getMax();
     }
 }

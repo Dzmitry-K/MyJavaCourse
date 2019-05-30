@@ -6,21 +6,21 @@
 package _3_generics._hw._hw_1_generics;
 
 
-public class getMax<T extends Comparable<T>> extends Pair<T>{
+public class MinMaxPair<T extends Comparable<T>> extends Pair<T>{
 
-    public getMax(T firstElem, T secondElem) {
+    public MinMaxPair(T firstElem, T secondElem) {
         super(firstElem, secondElem);
     }
 
-    public getMax(Pair <T> pair) {
+    public MinMaxPair(Pair <T> pair) {
         super(pair.getFirstElem(), pair.getSecondElem());
     }
 
-    public T maxPair(){
+    public T getMax() {
         return super.getFirstElem().compareTo(super.getSecondElem()) > 0 ? super.getFirstElem() : super.getSecondElem();
     }
 
-    public T minPair() {
+    public T getMin() {
         return super.getFirstElem().compareTo(super.getSecondElem()) < 0 ? super.getFirstElem() : super.getSecondElem();
     }
 }

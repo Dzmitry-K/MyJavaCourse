@@ -19,8 +19,8 @@ public class PairMaxIterable implements Iterable<Integer> {
 
             @Override
             public Integer next() {
-                getMax pairMinMax = new getMax((Pair<Integer>) listIterator.next());
-                return (Integer) pairMinMax.maxPair();
+                MinMaxPair pairMinMax = new MinMaxPair((Pair<Integer>) listIterator.next());
+                return (Integer) pairMinMax.getMax();
             }
         };
     }
