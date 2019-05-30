@@ -48,10 +48,10 @@ public abstract class Car {
 
     @Override
     public String toString() {
-        return  "Марка = " + brand + '\'' +
-                ",\n Модель = " + model + '\'' +
+        return  "Марка = " + brand +
+                ",\n Модель = " + model +
                 ",\n Год выпуска = " + yearOfIssue +
-                ",\n Тип = " + type + '\'' +
+                ",\n Тип = " + type +
                 ",\n Вес = " + weight;
     }
 
