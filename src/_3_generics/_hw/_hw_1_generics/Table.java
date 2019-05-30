@@ -9,6 +9,7 @@ package _3_generics._hw._hw_1_generics;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 
 public class Table<K, V> {
 
@@ -35,7 +36,7 @@ public class Table<K, V> {
 
     @SuppressWarnings("unchecked")
     public boolean addValue(K key, V value) {
-        for (Entry entry : entryList) {
+        for (Entry<K,V> entry : entryList) {
             if (entry.getKey().equals(key)) {
                 entry.setValue(value);
                 return true;
@@ -45,11 +46,10 @@ public class Table<K, V> {
     }
 
     public boolean remove(K key) {
-        Iterator<Entry<K, V>> entryIterator = entryList.iterator();
+        ListIterator<Entry<K, V>> entryIterator = entryList.listIterator();
         while (entryIterator.hasNext()) {
-            Entry entry = entryIterator.next();
-            if (entry.getKey().equals(key)) {
-                entryList.remove(entry);
+            if (entryIterator.next().getKey().equals(key)) {
+                entryList.remove(entryIterator.next());
                 return true;
             }
         }
@@ -64,4 +64,5 @@ public class Table<K, V> {
     public List<Entry<K, V>> getEntryList() {
         return entryList;
     }
+
 }
