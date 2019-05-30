@@ -25,7 +25,7 @@ public class Table<K, V> {
     @SuppressWarnings("unchecked")
     public List<V> getValue(K key) {
         List<V> values = new ArrayList<>();
-        for (Entry entry : entryList) {
+        for (Entry<K,V> entry : entryList) {
             if (entry.getKey().equals(key)) {
                 values.add((V) entry.getValue());
             }
