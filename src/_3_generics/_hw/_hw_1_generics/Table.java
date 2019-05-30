@@ -7,7 +7,6 @@
 package _3_generics._hw._hw_1_generics;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
