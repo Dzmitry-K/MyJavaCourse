@@ -18,12 +18,12 @@ public class Test {
             System.out.print(max + " ");
         }
 
-//        System.out.println();
+        System.out.println();
 
-//        for (Object max : PairMaxIterable.pairMaxInterval(1, 4, asList(new Pair("0qewwwww", "d0wfwew"),
-//                new Pair("z1qewwwww", "d1wfwew"), new Pair("z2qewwwww", "d2wfwew"), new Pair("3qew", "d3wfwew"),
-//                new Pair("4qew", "d4wfwew"), new Pair("5qew", "d5wfwew")))) {
-//            System.out.print(max + " ");
-//        }
+        for (Object max : PairMaxIterable.pairMaxInterval(1, 4, asList(new Pair("fadfadsfa", "werxsfcs"),
+                new Pair("sdfgsdfgsdfg", "werwerwer"), new Pair("sdfgsfsdf", "afadfadsfa"), new Pair("sdfs", "werwdhj"),
+                new Pair("ghjyt", "sr345dfgdf"), new Pair("dhg565", "ghdfer5643")))) {
+            System.out.print(max + " ");
+        }
     }
 }
