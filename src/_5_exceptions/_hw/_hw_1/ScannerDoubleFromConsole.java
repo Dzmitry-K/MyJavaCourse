@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ScannerDoubleFromConsole {
-    public List readData() {
+    public List readValues() {
         Scanner in = new Scanner(System.in);
         List<Double> doubleList = new ArrayList<>();
         try {
