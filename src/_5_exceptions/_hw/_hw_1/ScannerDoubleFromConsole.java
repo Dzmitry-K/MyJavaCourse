@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ScannerDoubleFromConsole {
-    public List readValues() throws Throwable {
+    public List readValues() throws Throwable{
         Scanner in = new Scanner(System.in);
         List<Double> doubleList = new ArrayList<>();
         int count = 0;
