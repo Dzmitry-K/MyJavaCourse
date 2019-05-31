@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ScannerDoubleFromConsole {
-    public List readValues() throws Throwable{
+    public List readValues() throws NumberFormatException{
         Scanner in = new Scanner(System.in);
         List<Double> doubleList = new ArrayList<>();
         int count = 0;
@@ -33,7 +33,7 @@ public class ScannerDoubleFromConsole {
         return doubleList;
     }
 
-    public static double sumOfValues(List<Double> doubleList) throws Throwable {
+    public static double sumOfValues(List<Double> doubleList) throws NumberFormatException {
         Double summ = 0d;
         for (Double elem : doubleList) {
             summ += elem;
