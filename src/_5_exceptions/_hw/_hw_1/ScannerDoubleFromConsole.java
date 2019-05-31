@@ -21,9 +21,11 @@ public class ScannerDoubleFromConsole {
     public List readValues() throws Throwable {
         Scanner in = new Scanner(System.in);
         List<Double> doubleList = new ArrayList<>();
+        int count = 0;
         try {
-            while ((in.hasNext())) {
+            while (count < 4 && (in.hasNext())) {
                 doubleList.add(Double.valueOf(in.next()));
+                count++;
             }
         } catch (NumberFormatException e) {
             System.out.println(e);

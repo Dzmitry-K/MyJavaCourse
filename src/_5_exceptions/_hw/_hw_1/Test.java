@@ -5,7 +5,9 @@ import java.util.List;
 public class Test {
     public static void main(String[] args) throws Throwable {
 
-        System.out.println(ScannerDoubleFromConsole.sumOfValues(new ScannerDoubleFromConsole().readValues()));
+        List<Double> list = new ScannerDoubleFromConsole().readValues();
+        System.out.println(list);
+        System.out.println(ScannerDoubleFromConsole.sumOfValues(list));
 
     }
 }
