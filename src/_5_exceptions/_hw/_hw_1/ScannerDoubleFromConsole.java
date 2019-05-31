@@ -1,8 +1,14 @@
 /**
- *      Напишите метод public List<Double> readValues() throws ..., читающий числа
+ *      1. Напишите метод public List<Double> readValues() throws ..., читающий числа
  *      с плавающей точкой из ввода консоли, через Scanner. Сгенерируйте подходящие исключения,
  *      если ввод если введены данные, не относящиеся к числам с плавающей точкой.
  *      Ввод:  1 2 3 4 aaaa
+ *
+ *      2. Напишите метод public double sumOfValues() throws ..., вызывающий метод из предыдущего упражнения
+ *      и возвращающий сумму введеных значений в разных строках. Организуйте распространение любых исключений
+ *      вызывающему коду.
+ *      Ввод:   1 2 3 4
+ *              2 3 4 aaa
  */
 
 package _5_exceptions._hw._hw_1;
@@ -23,5 +29,13 @@ public class ScannerDoubleFromConsole {
             System.out.println(e);
         }
         return doubleList;
+    }
+
+    public static double sumOfValues(List<Double> doubleList) throws Throwable {
+        Double summ = 0d;
+        for (Double elem : doubleList) {
+            summ += elem;
+        }
+        return summ;
     }
 }
