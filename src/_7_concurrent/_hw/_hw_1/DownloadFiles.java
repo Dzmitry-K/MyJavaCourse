@@ -7,6 +7,7 @@
 package _7_concurrent._hw._hw_1;
 
 import java.io.*;
+import java.net.URL;
 
 public class DownloadFiles implements Runnable{
 
@@ -22,20 +23,18 @@ public class DownloadFiles implements Runnable{
     @Override
     public void run() {
 
-        File copied = new File(url+fileName);
         try (
-                InputStream in = new BufferedInputStream(new FileInputStream(PATH));
-                OutputStream out = new BufferedOutputStream(new FileOutputStream(copied))
+                BufferedInputStream in = new BufferedInputStream(new URL(url + fileName).openStream());
+                FileOutputStream out = new FileOutputStream(PATH + fileName)
             ) {
 
-            byte[] buffer = new byte[1024];
-            int lengthRead;
-            while((lengthRead = in.read(buffer)) > 0 ) {
-                out.write(buffer, 0, lengthRead);
-                out.flush();
+            final byte data[] = new byte[1024];
+            int count;
+            while ((count = in.read(data, 0, 1024)) != -1) {
+                out.write(data, 0, count);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println(e);
         }
 
     }
