@@ -37,7 +37,7 @@ public class FileUtils {
                 list.add(in.readInt());
             }
         } catch (IOException ex) {
-            throw new UncheckedIOException(ex);
+            throw new RuntimeException(ex);
         }
 
         list.sort(Comparator.naturalOrder());
