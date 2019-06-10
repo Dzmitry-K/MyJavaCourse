@@ -34,7 +34,7 @@ public class DownloadFiles implements Runnable{
                 out.write(data, 0, count);
             }
         } catch (IOException e) {
-            System.out.println(e);
+            throw new RuntimeException(e);
         }
 
     }
