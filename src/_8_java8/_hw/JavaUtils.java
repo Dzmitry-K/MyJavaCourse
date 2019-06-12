@@ -18,7 +18,7 @@ import java.util.stream.Stream;
 public class JavaUtils {
 
     public static Optional<String> getMaxString(List<String> words) {
-        return words.stream().max(Comparator.comparingInt(word -> word.replaceAll("[A-Z]", "").length()));
+        return words.stream().max(Comparator.comparingInt(word -> word.replaceAll("[^a-z]", "").length()));
     }
 
     public static Map<String, Integer> getWordsAmount(Stream<String> words) {
