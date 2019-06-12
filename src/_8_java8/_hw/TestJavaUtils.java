@@ -13,9 +13,9 @@ public class TestJavaUtils {
     private static Stream<String> names = Stream.of("John", "Paul", "George", "John", "Paul", "John");
 
     public static void main(String[] args) {
-        words.add("dafdadfad sdfsd Kladjfaqerqerqerqewr asdfeewrwerq");
+        words.add("dafdadfad sdfsd Kladjfaqerqerqerqewr          asdfeewrwerq");
         words.add("www Dfsd erqerqerqewr afeewrwerq");
-        words.add("Tsdfsdfafdadfad Sdfsdfsdfsd kladjsdfsdfsfaqerqerqerqewr asdfeewrwerq");
+        words.add("Tsdfsdfafdadfad Sdfsdfsdfsd kladjsdfsdfsfa feewrwerq");
         words.add("d Sd jfaqerqerqerqewr q");
         Optional<String> optional = JavaUtils.getMaxString(words);
         optional.ifPresent(System.out::println);
