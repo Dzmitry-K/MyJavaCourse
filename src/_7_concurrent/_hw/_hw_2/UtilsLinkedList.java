@@ -25,10 +25,11 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class UtilsLinkedList {
     private LinkedList<Integer> list;
-    private final int maxLengt = 10;
+    private final int MAX_LENGTH = 10;
     private final Lock lock = new ReentrantLock(true);
     private final Condition empty = lock.newCondition();
     private final Condition full = lock.newCondition();
+    private int randNumber = new Random().nextInt();
 
 
     public UtilsLinkedList(LinkedList<Integer> list) {
@@ -38,11 +39,10 @@ public class UtilsLinkedList {
     public void produce() {
         lock.lock();
         try {
-            while (list.size() >= 10) {
+            while (list.size() >= MAX_LENGTH) {
                 System.err.println("Список переполнен " + list.size());
                 full.await();
             }
-            int randNumber = new Random().nextInt();
             System.err.println("Добавляем случайное число " + randNumber);
             list.add(randNumber);
             empty.signal();
