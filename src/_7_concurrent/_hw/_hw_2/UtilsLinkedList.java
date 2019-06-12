@@ -5,7 +5,6 @@ import java.util.Random;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-
 /**
  *     Задан LinkedList, представляющий собой хранилище целых чисел.
  *     Метод produce бесконечно добавляет в этот список случайные числа, однако максимальное количество,
@@ -20,8 +19,6 @@ import java.util.concurrent.locks.ReentrantLock;
  *     работы хранилища с помощью вывода сообщений в консоль о добавлении, получении и текущем размере хранилища
  *     на этапах добавления и получения.
  */
-
-
 public class UtilsLinkedList {
     private List<Integer> list;
     private final int MAX_LENGTH = 10;
