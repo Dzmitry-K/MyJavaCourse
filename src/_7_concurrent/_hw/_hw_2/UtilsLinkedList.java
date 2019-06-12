@@ -17,14 +17,14 @@
 
 package _7_concurrent._hw._hw_2;
 
-import java.util.LinkedList;
+import java.util.List;
 import java.util.Random;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class UtilsLinkedList {
-    private LinkedList<Integer> list;
+    private List<Integer> list;
     private final int MAX_LENGTH = 10;
     private final Lock lock = new ReentrantLock(true);
     private final Condition empty = lock.newCondition();
@@ -32,7 +32,7 @@ public class UtilsLinkedList {
     private int randNumber = new Random().nextInt();
 
 
-    public UtilsLinkedList(LinkedList<Integer> list) {
+    public UtilsLinkedList(List<Integer> list) {
         this.list = list;
     }
 
@@ -47,7 +47,7 @@ public class UtilsLinkedList {
             list.add(randNumber);
             empty.signal();
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         } finally {
             lock.unlock();
         }
@@ -60,13 +60,12 @@ public class UtilsLinkedList {
                 System.err.println("Список пуст");
                 empty.await();
             }
-            Integer number = list.removeFirst();
+            Integer number = list.remove(0);
             System.err.println("Извлеченное число " + number);
             full.signal();
             return number;
         } catch (InterruptedException ex) {
-            ex.printStackTrace();
-            return null;
+            throw new RuntimeException(ex);
         } finally {
             lock.unlock();
         }
