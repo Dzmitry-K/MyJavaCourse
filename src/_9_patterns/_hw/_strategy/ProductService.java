@@ -5,7 +5,7 @@ import java.util.List;
 public class ProductService {
 
     private ProductFilteringStrategy filterStrategy;
-    private List<Product> products;
+
 
     public void filter(ProductFilteringStrategy filterStrategy) {
         this.filterStrategy = filterStrategy;
