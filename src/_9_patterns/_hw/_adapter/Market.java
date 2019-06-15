@@ -10,7 +10,7 @@ public class Market {
     }
 
     private boolean pay(PaymentAdapter paymentAdapter, Integer amount){
-        System.out.println("Successfully paid " + amount + " $");
+        System.out.println("Payment made successfully. " + amount + "$  has been withdrawn from your account.");
         return paymentAdapter.collectMoney(amount);
     }
 }
