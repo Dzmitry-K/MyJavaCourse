@@ -13,7 +13,7 @@ public class Test {
 
         List<Product> products = Arrays.asList(product1, product2, product3, product4, product5);
 
-//        System.out.println(new ProductService(products).filter(new FilterByName("sw")));
+        System.out.println(new ProductService(products).filter(new FilterByName("sw")));
         System.out.println(new ProductService(products).filter(new FilterByPrice(10)));
     }
 }
