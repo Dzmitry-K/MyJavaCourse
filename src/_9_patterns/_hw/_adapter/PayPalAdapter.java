@@ -9,6 +9,6 @@ public class PayPalAdapter implements PaymentAdapter {
 
     @Override
     public boolean collectMoney(Integer amount) {
-        return this.payPalAccount.transfer(payPalAccount.getEmail(),amount).equals("Paypal Success!");
+        return this.payPalAccount.transfer(payPalAccount.getEmail(),amount).contains("Paypal Success");
     }
 }

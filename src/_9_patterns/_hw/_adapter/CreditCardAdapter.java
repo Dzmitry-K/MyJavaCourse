@@ -9,6 +9,6 @@ public class CreditCardAdapter implements PaymentAdapter {
 
     @Override
     public boolean collectMoney(Integer amount) {
-        return this.creditCard.authorizeTransaction(amount).equals("Authorization code: as2321");
+        return this.creditCard.authorizeTransaction(amount).contains("Authorization code");
     }
 }

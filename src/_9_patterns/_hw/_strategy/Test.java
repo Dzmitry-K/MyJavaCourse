@@ -12,8 +12,9 @@ public class Test {
         Product product5 = new Product("sweet", 4, 5);
 
         List<Product> products = Arrays.asList(product1, product2, product3, product4, product5);
+        ProductService productService = new ProductService(products);
 
-        System.out.println(new ProductService(products).filter(new FilterByName("sw")));
-        System.out.println(new ProductService(products).filter(new FilterByPrice(10)));
+        System.out.println(productService.filter(new FilterByName("sw")));
+        System.out.println(productService.filter(new FilterByPrice(10)));
     }
 }
